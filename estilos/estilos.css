@@ -13,6 +13,13 @@ body {
     scroll-behavior: smooth;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    
+}
+
 footer {
     background-color: black;
     color: white;
@@ -36,6 +43,8 @@ h5,
 h6 {
     font-weight: 300;
     padding: 5px 20px;
+    font-weight: bold;
+    font-style: italic;
 }
 
 h4 {
@@ -51,7 +60,8 @@ p {
 }
 
 .fondoSubtitulo {
-    background-color: #F8E09D;
+    background-color: #FAEDC5;
+    font-weight: bold!important;
 }
 
 
@@ -283,8 +293,8 @@ p {
 }
 
 .imagenTarjeta1 {
-    padding: 1em;
-    width: 150px;
+    margin: 0 1.5em;
+    width: 100px;
     height: 25px;
 }
 
@@ -382,21 +392,20 @@ p {
 .contenedor-art {
     margin: 1em auto;
     width: 80%;
-    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
 
 }
 
-@media (min-width: 760px) {
+@media (min-width: 820px) {
     .contenedor-artistas {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         gap: 0px 0px;
         grid-template-areas:
-            "contenedor-art-1 contenedor-art-2 contenedor-art-3";
+            "contenedor-art-1 contenedor-art-2"
+            "contenedor-art-3 .";
     }
 
     .contenedor-art-1 {
@@ -422,11 +431,12 @@ p {
 
     .contenedor-artistas-2 {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         gap: 0px 0px;
         grid-template-areas:
-            "contenedor-art-1 contenedor-art-2 contenedor-art-3";
+            "contenedor-art-1 contenedor-art-2"
+            "contenedor-art-3 .";
     }
 
     .contenedor-art-1 {
@@ -446,11 +456,12 @@ p {
 
     .contenedor-artistas-3 {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         gap: 0px 0px;
         grid-template-areas:
-            "contenedor-art-1 contenedor-art-2 contenedor-art-3";
+            "contenedor-art-1  contenedor-art-2"
+            "contenedor-art-3 .";
     }
 
     .contenedor-art-1 {
@@ -488,11 +499,8 @@ p {
     color: white;
 }
 
-.contenedor-epocas {
-    text-align: center;
-}
 
-@media (min-width: 760px) {
+@media (min-width: 820px) {
     .contenedor-epocas {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -509,7 +517,6 @@ p {
         width: 100%;
         display: flex !important;
         flex-direction: column;
-        align-items: center;
 
 
     }
@@ -519,7 +526,6 @@ p {
         width: 100%;
         display: flex !important;
         flex-direction: column;
-        align-items: center;
 
 
     }
@@ -528,10 +534,7 @@ p {
         grid-area: contenedor-epoca-3;
         width: 100%;
         display: flex !important;
-        flex-direction: column;
-        align-items: center;
-
-
+        flex-direction: column; 
     }
 
     .row-2 {
@@ -565,6 +568,13 @@ p {
 
 }
 
+@media (max-width: 413px) {
+    .imagenRectangular {
+        width: 300px!important;
+    }
+}
+
+
 
 /* SECCION COMUNIDAD */
 .tituloComunidad {
@@ -581,14 +591,12 @@ p {
 }
 
 .contenedorComunidad {
-    text-align: center;
     padding: 1em;
     margin-top: 3em;
     width: 100%;
 }
 
 .contenedorComunidad p {
-    text-align: justify;
     padding: 0 1em;
 }
 
@@ -655,11 +663,6 @@ p {
     justify-content: center;
     padding: 2em;
 }
-
-.display-none-s {
-    display: none;
-}
-
 @media (min-width: 760px) {
     .contenedor-sobreAlma {
         display: flex;
@@ -692,6 +695,13 @@ p {
     .sobreAlma-m p {
         margin: 0 20px;
         padding: 0 20px;
+    }
+}
+
+@media (max-width: 413px) {
+    .sobreAlma-column {
+        flex-direction: column;
+        padding: 0 2em;
     }
 }
 
@@ -782,17 +792,9 @@ textarea::placeholder {
 
 
 /* FOOTER */
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+footer { 
     padding: 10px 20px
 }
-
-.logoFooter {
-    width: 10%;
-}
-
 
 /* PAGINA FRIDA */
 .titulofrida {
@@ -875,3 +877,13 @@ footer {
     object-position: top;
 }
 
+.carousel {
+    width: 60%!important;
+    margin: 0 auto!important;
+}
+
+@media (max-width: 413px) {
+    .carousel {
+        width: 100%!important;
+    }
+}
