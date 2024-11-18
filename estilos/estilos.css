@@ -499,7 +499,6 @@ p {
     color: white;
 }
 
-
 @media (min-width: 820px) {
     .contenedor-epocas {
         display: grid;
@@ -510,6 +509,7 @@ p {
         grid-template-areas:
             "contenedor-epoca-1 contenedor-epoca-2 contenedor-epoca-3"
             "row-2 row-2 row-2";
+            margin: 3em;
     }
 
     .contenedor-epoca-1 {
@@ -568,7 +568,7 @@ p {
 
 }
 
-@media (max-width: 413px) {
+@media (max-width: 450px) {
     .imagenRectangular {
         width: 300px!important;
     }
