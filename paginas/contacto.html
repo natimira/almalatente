@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../estilos/estilos.css" />
+    <title>Alma Latente</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="../index.html"><img class="logo" src="../imagenes/logoBlanco.png" alt="logo Alma Latente" /></a>
+            <div class="menu">
+                <ul class="nav-links">
+                    <li><a href="../paginas/artistas.html">Artistas</a></li>
+                    <li><a href="../paginas/epocas.html">Épocas</a></li>
+                    <li><a href="../paginas/comunidad.html">Comunidad</a></li>
+                    <li><a href="../paginas/sobreAl.html">Sobre AL</a></li>
+                    <li><a href="../paginas/contacto.html">Contacto</a></li>
+                </ul>
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tituloContacto">
+            <h1>CONTACTO</h1>
+        </div>
+
+        <div class="contenedor-contacto">
+            <div class="contacto-interno">
+                <h2>¿YA SOS MIEMBRO? INICIA SESIÓN</h2>
+                <div class="form-container">
+                    <form action="https://formspree.io/f/tu-codigo" method="POST">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                            <input type="text" id="apellido" name="apellido" placeholder="Apellido" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="ejemplo@ejemplo.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="boton">ENVIAR</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="contacto-interno">
+                <h2>PREGUNTAS FRECUENTES</h2>
+                <!-- pregunta 1 -->
+                <p class="d-inline-flex gap-1">
+                    <button class="boton" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                        aria-expanded="false" aria-controls="collapseExample">
+                        ¿Puedo invitar colegas o amigos a unirse a la comunidad? <svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="ms-2 bi bi-caret-down-fill"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                        </svg>
+                    </button>
+                </p>
+                <div class="collapse" id="collapse1">
+                    <div class="card card-body">
+                        ¡Claro que sí! En Alma Latente, creemos en el poder de las conexiones. Puedes invitar a tus
+                        amigos y colegas apasionados por el arte y la cultura a unirse a nuestra plataforma. Comparte el
+                        enlace de registro o, si deseas, recomiéndales explorar los grupos y espacios que hemos creado
+                        para compartir y descubrir contenido juntos.
+                    </div>
+                </div>
+
+                <!-- pregunta 2 -->
+                <p class="d-inline-flex gap-1">
+                    <button class="boton" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2"
+                        aria-expanded="false" aria-controls="collapseExample">
+                        ¿Que hago si tengo problemas para acceder a mi cuenta? <svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="ms-2 bi bi-caret-down-fill"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                        </svg>
+                    </button>
+                </p>
+                <div class="collapse" id="collapse2">
+                    <div class="card card-body">
+                        Si tienes problemas para acceder a tu cuenta, intenta restablecer tu contraseña usando el enlace
+                        de "¿Olvidaste tu contraseña?" en la página de inicio de sesión. Te enviaremos un correo para
+                        ayudarte a recuperar el acceso. Si el problema persiste, puedes contactar a nuestro equipo de
+                        soporte desde la sección de "Ayuda" para recibir asistencia personalizada.
+                    </div>
+                </div>
+
+                <!-- pregunta 3 -->
+                <p class="d-inline-flex gap-1">
+                    <button class="boton" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3"
+                        aria-expanded="false" aria-controls="collapseExample">
+                        ¿Puedo actualizar mi perfil dentro de la comunidad? <svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="ms-2 bi bi-caret-down-fill"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                        </svg>
+                    </button>
+                </p>
+                <div class="collapse mb-5" id="collapse3">
+                    <div class="card card-body">
+                        Sí, puedes actualizar tu perfil en cualquier momento. Solo tienes que dirigirte a la sección de
+                        configuración de tu cuenta, donde podrás modificar tu foto de perfil, tu biografía, tus
+                        intereses artísticos y culturales, y cualquier otra información que desees compartir con la
+                        comunidad. Mantén tu perfil al día para conectar con personas afines y hacer que otros descubran
+                        tu arte y tus ideas.
+                    </div>
+                </div>
+
+                <!-- pregunta 4 -->
+                <h3 class="titulo-celeste">¿Como puedo unirme a la Comunidad Alma Latente?</h3>
+                <p>
+                    Unirse a Alma Latente es fácil. Simplemente visita nuestra página de registro y completa el
+                    formulario
+                    con
+                    tus datos básicos. Una vez que envíes tu solicitud, recibirás un correo electrónico de confirmación
+                    con
+                    detalles adicionales sobre cómo comenzar. También puedes contactar a nuestro equipo de soporte si
+                    necesitas
+                    asistencia durante el proceso de inscripción.
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="contenedorBoton">
+            <a href="#"><button class="boton">VOLVER AL INICIO</button></a>
+        </div>
+    </main>
+
+    <footer>
+        <img class="logoFooter" src="../imagenes/logoNegro.png" alt="logo footer" />
+        <p>Todos los rerechos reservados</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="../main.js"></script>
+</body>
+
+</html>

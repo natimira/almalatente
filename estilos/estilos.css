@@ -1,0 +1,877 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 0px;
+}
+
+html,
+body {
+    font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+}
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif !important;
+    padding: 20px;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+h2 {
+    padding: 20px;
+    font-size: 20px;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 300;
+    padding: 5px 20px;
+}
+
+h4 {
+    font-style: italic;
+}
+
+p {
+    padding: 20px;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.fondoSubtitulo {
+    background-color: #F8E09D;
+}
+
+
+
+/* NAVBAR */
+.logo {
+    width: 15%;
+    transition: 0.3s ease-in-out;
+}
+
+.logo:hover {
+    cursor: pointer;
+    scale: 1.2;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px black;
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+    ;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.menu li {
+    list-style: none;
+    padding: 0.3em 0;
+}
+
+
+.imagen {
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.imagenCuadrada {
+    margin: auto;
+    object-fit: cover;
+    width: 350px;
+    height: 350px;
+}
+
+.burger {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    display: none;
+}
+
+/* las tres lineas clasicas de un menu hamburguesa */
+.burger span {
+    background: black !important;
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+/* estas clases controlan el comportamiento de las tres lineas para que al hacer click, se muevan formando una cruz y vuelvan a su estado orginal */
+.burger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+    /* esta borra */
+}
+
+.burger.active span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+}
+
+.burger.active span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+.burger.active span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
+}
+
+@media (min-width: 760px) {
+    .navbar a {
+        width: 25%;
+    }
+
+    .menu ul {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .menu li {
+        display: inline-block;
+        padding: 1em;
+    }
+}
+
+@media (max-width: 935px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .nav-links li a {
+        height: 2em;
+    }
+
+    .nav-links.active {
+        display: flex;
+        color: black;
+        background-color: white;
+        margin: 1em auto;
+        padding: 0 1em;
+        gap: 0.5em;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+
+
+/* HOME */
+.titulo {
+    padding: 4em 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagenes/image.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.contenedor {
+    margin: 1em auto;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.contenedorImagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorBoton {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.boton {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.boton:hover {
+    background-color: white;
+    color: black;
+    border: solid 1px black;
+    cursor: pointer;
+
+}
+
+.tarjeta {
+    width: 70%;
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 2em;
+    border: solid 1px black;
+    border-radius: 25px;
+    padding: 15px;
+}
+
+.tarjetaInterno {
+    display: flex;
+}
+
+.imagenTarjeta1 {
+    padding: 1em;
+    width: 150px;
+    height: 25px;
+}
+
+.imagenTarjeta2 {
+    padding: 1em;
+    width: 80px;
+    height: 80px;
+}
+
+@media (min-width: 760px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .contenedor-home {
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        grid-template-rows: 0.8fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "contenedor-1 contenedor-2"
+            "contenedor-3 contenedor-4";
+    }
+
+    .contenedor-1 {
+        grid-area: contenedor-1;
+        justify-content: space-between;
+    }
+
+    .contenedor-2 {
+        grid-area: contenedor-2;
+        justify-content: space-between;
+    }
+
+    .contenedor-3 {
+        grid-area: contenedor-3;
+        justify-content: space-between;
+    }
+
+    .contenedor-4 {
+        grid-area: contenedor-4;
+        justify-content: space-between;
+    }
+
+
+}
+
+@media (min-width: 1060px) {
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    .contenedor-home {
+        margin: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contenedor-home-2 {
+        margin: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1em;
+    }
+
+    .contenedor {
+        width: 25%;
+        justify-content: space-between;
+    }
+
+    .tarjeta {
+        width: 90%;
+        flex: 1;
+    }
+}
+
+
+/*  ARTISTAS */
+.tituloArtistas {
+    padding: 4em 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagenes/home3.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.contenedor-artistas {
+    max-width: 100vw;
+    margin: auto;
+}
+
+.contenedor-art {
+    margin: 1em auto;
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+@media (min-width: 760px) {
+    .contenedor-artistas {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "contenedor-art-1 contenedor-art-2 contenedor-art-3";
+    }
+
+    .contenedor-art-1 {
+        grid-area: contenedor-art-1;
+        justify-content: space-between;
+    }
+
+    .contenedor-art-2 {
+        grid-area: contenedor-art-2;
+        justify-content: space-between;
+    }
+
+    .contenedor-art-3 {
+        grid-area: contenedor-art-3;
+        justify-content: space-between;
+    }
+
+    .imagenCuadrada {
+        width: 220px;
+        height: 220px;
+        margin: 0.5em;
+    }
+
+    .contenedor-artistas-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "contenedor-art-1 contenedor-art-2 contenedor-art-3";
+    }
+
+    .contenedor-art-1 {
+        grid-area: contenedor-art-1;
+        justify-content: space-between;
+    }
+
+    .contenedor-art-2 {
+        grid-area: contenedor-art-2;
+        justify-content: space-between;
+    }
+
+    .contenedor-art-3 {
+        grid-area: contenedor-art-3;
+        justify-content: space-between;
+    }
+
+    .contenedor-artistas-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "contenedor-art-1 contenedor-art-2 contenedor-art-3";
+    }
+
+    .contenedor-art-1 {
+        grid-area: contenedor-art-1;
+        justify-content: space-between;
+    }
+
+    .contenedor-art-2 {
+        grid-area: contenedor-art-2;
+        justify-content: space-between;
+    }
+
+    .contenedor-art-3 {
+        grid-area: contenedor-art-3;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1060px) {
+    .imagenCuadrada {
+        width: 300px;
+        height: 300px;
+        margin: 0.5em;
+    }
+}
+
+
+
+/* EPOCAS */
+.tituloEpocas {
+    padding: 4em 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imageneS/fondoEpocas.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.contenedor-epocas {
+    text-align: center;
+}
+
+@media (min-width: 760px) {
+    .contenedor-epocas {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "contenedor-epoca-1 contenedor-epoca-2 contenedor-epoca-3"
+            "row-2 row-2 row-2";
+    }
+
+    .contenedor-epoca-1 {
+        grid-area: contenedor-epoca-1;
+        width: 100%;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+
+    .contenedor-epoca-2 {
+        grid-area: contenedor-epoca-2;
+        width: 100%;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+
+    .contenedor-epoca-3 {
+        grid-area: contenedor-epoca-3;
+        width: 100%;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+
+    .row-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "contenedor-epoca-4 contenedor-epoca-5";
+        grid-area: row-2;
+    }
+
+    .contenedor-epoca-4 {
+        grid-area: contenedor-epoca-4;
+        width: 100%;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+
+    .contenedor-epoca-5 {
+        grid-area: contenedor-epoca-5;
+        width: 100%;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+
+/* SECCION COMUNIDAD */
+.tituloComunidad {
+    padding: 4em 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagenes/fondoComunidad.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.subtitulo-comunidad h3 {
+    font-weight: bold;
+    padding: 1em;
+}
+
+.contenedorComunidad {
+    text-align: center;
+    padding: 1em;
+    margin-top: 3em;
+    width: 100%;
+}
+
+.contenedorComunidad p {
+    text-align: justify;
+    padding: 0 1em;
+}
+
+.contenedor-comunidad {
+    margin: 1em auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    border: solid 1px black;
+    border-radius: 10px;
+    margin: 2em;
+    height: 400px;
+}
+
+@media (min-width: 760px) {
+    .comunidad {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contenedor-comunidad {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    .contenedorImagen {
+        width: 50%;
+    }
+}
+
+/* SECCION SOBRE ALMA */
+.tituloSobreAlma {
+    padding: 4em 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagenes/image.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.contenedor-sobreAlma {
+    margin: 1em auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.sobreAlma-interno {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+}
+
+.display-none-s {
+    display: none;
+}
+
+@media (min-width: 760px) {
+    .contenedor-sobreAlma {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    .imagenCuadrada {
+        margin-top: 2em;
+    }
+
+    .display-none-s {
+        display: block;
+    }
+
+    .display-none-m {
+        display: none;
+    }
+
+    .sobreAlma-m {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sobreAlma-m h2 {
+        margin: 0 20px;
+        padding: 0 20px;
+    }
+
+    .sobreAlma-m p {
+        margin: 0 20px;
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 1250px) {
+    .imagenCuadrada {
+        width: 450px;
+        height: 450px;
+        margin: 1em;
+    }
+}
+
+/* SECCION CONTACTO */
+.tituloContacto {
+    padding: 4em 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../imagenes/image.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.titulo-celeste {
+    background-color: rgb(226, 234, 255);
+    margin: 0 1em;
+    padding: 0.5em 0;
+    font-weight: bold;
+}
+
+.contacto-interno h2 {
+    margin-top: 2em;
+}
+
+.form-container {
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #000;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #bbb;
+}
+
+@media (min-width: 760px) {
+    .contenedor-contacto {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    .contacto-interno {
+        margin: 1em;
+        padding: 0em;
+        width: 100%;
+    }
+}
+
+
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px
+}
+
+.logoFooter {
+    width: 10%;
+}
+
+
+/* PAGINA FRIDA */
+.titulofrida {
+    margin: 0 auto;
+}
+
+.contenedor-frida {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.contenedor-frida>div {
+    flex-basis: 30%;
+    margin: 3em 1em;
+}
+
+.contenedor-frida div p {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.fila {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.columna {
+    flex-basis: 50%;
+}
+
+.columna img {
+    width: 80%;
+    height: 450px;
+    transition: 0.3s;
+    object-fit: cover;
+}
+
+.columna p {
+    padding: 0;
+    margin: 0 auto;
+}
+
+.video {
+    width: 95%;
+    height: 450px;
+    border-radius: 15px;
+    margin: 0 auto !important;
+    transition: 0.3s;
+}
+
+.titulo-carousel {
+    margin: 0 !important;
+}
+
+#carouselExample {
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+@media (max-width: 875px) {
+    .columna {
+        flex-basis: 100%;
+    }
+
+    .columna img {
+        width: 100%;
+    }
+
+    .video {
+        height: 350px;
+    }
+}
+
+.carousel-item img {
+    height: 600px;
+    object-position: top;
+}
+
